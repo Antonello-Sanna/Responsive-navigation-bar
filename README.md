@@ -1,4 +1,4 @@
-# react-responsive-navigation
+#react-responsive-navigation
 A plug and play solution for your navigation bar needs…
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_86591FB794132C7BE9E767197E3584B3C5567A5820418BAE9F8C3775ABA9569E_1525625035893_Screen+Shot+2018-05-06+at+18.42.44.png)
@@ -8,7 +8,10 @@ A plug and play solution for your navigation bar needs…
 it’s fairly simple but is responsive and can have drop downs if required.
 The Component should ideally be loaded directly from the Router as shown in the example.
 
-Usage Example:
+INSTALLATION
+    npm i react-responsive-navigation --save
+
+##Usage Example:
 
     import React from 'react'
     import {
@@ -39,7 +42,7 @@ Usage Example:
 The basic navbar without dropdown  can take the following props, only pages is required as a navbar usually requires at least one!
 
 
-Navbar props types:
+##Navbar props types:
 
 
     
@@ -53,7 +56,7 @@ Navbar props types:
         dropdown_color  = string
 
 
-NAVBAR PROPS DEFALT VALUES
+##NAVBAR PROPS DEFALT VALUES
 
 
         background              = 'rgba(1,0,0,.9)'
@@ -66,7 +69,7 @@ NAVBAR PROPS DEFALT VALUES
         dropdown_color          = 'rgba(1,0,0,.9)'
 
 
-USING DROPDOWNS
+##USING DROPDOWNS
 
 To use dropdowns all you have to do is to pass one or more page as an objects inside the pages array instead of a string using the following format.
 
@@ -74,7 +77,7 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
     { 'THE_NAME_OF_YOUR_PAGE': { dropdown:['dropdown1', 'dropdown2']}
 
 
-DROPDOWN PROPS TYPES
+##DROPDOWN PROPS TYPES
         dropdown_color          = string
         dropdown_minWidth       = string
         shadows                 = bool
@@ -82,14 +85,14 @@ DROPDOWN PROPS TYPES
         dropItem_margin_bottom  = string
 
 
-DROPDOWN PROPS DEFALT VALUES
+##DROPDOWN PROPS DEFALT VALUES
         dropdown_color          = 'rgba(1,0,0,.9)'
         dropdown_minWidth       = '200px'
         shadows                 = false
         dropdown_marginTop      = '10px',
         dropItem_margin_bottom  = '10px'
 
-Example passing all the optional props and also using dropdowns.
+##Example passing all the optional props and also using dropdowns.
 
 
     import React from 'react'
@@ -130,3 +133,4 @@ Example passing all the optional props and also using dropdowns.
             </Router>
         )
       }
+
