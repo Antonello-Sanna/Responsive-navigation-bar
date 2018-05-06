@@ -1,0 +1,32 @@
+.inactive::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top:2px;
+    background: #ddd;
+    transition: width .3s;
+}
+/* .active::after {
+    width: 100%;
+    transition: width .3s;
+    background: red;
+} */
+
+.inactive{
+	display:inline-block;
+    color:white;
+    text-transform: capitalize;
+}
+
+.burger {
+    width: 25px;
+    height: 4px;
+    margin: 4px 0;
+    background: white !important;
+
+}
+.mainBurger{
+    padding:10px;
+    display: inline-block;
+}
