@@ -1,4 +1,4 @@
-#reactjs-navigation
+# reactjs-navigation
 A plug and play solution for your navigation bar needs…
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_86591FB794132C7BE9E767197E3584B3C5567A5820418BAE9F8C3775ABA9569E_1525625035893_Screen+Shot+2018-05-06+at+18.42.44.png)
@@ -9,10 +9,10 @@ A plug and play solution for your navigation bar needs…
 it is fairly simple but is responsive and can have drop downs if required.
 The Component should ideally be loaded directly from the Router as shown in the example.
 
-##INSTALLATION
+## INSTALLATION
     npm i react-responsive-navigation --save
 
-##Usage Example:
+## Usage Example:
 
     import React from 'react'
     import {
