@@ -43,7 +43,7 @@ The Component should ideally be loaded directly from the Router as shown in the 
 The basic navbar without dropdown  can take the following props, only pages is required as a navbar usually requires at least one!
 
 
-##Navbar props types:
+## Navbar props types:
 
 
     
@@ -57,7 +57,7 @@ The basic navbar without dropdown  can take the following props, only pages is r
         dropdown_color  = string
 
 
-##NAVBAR PROPS DEFALT VALUES
+## NAVBAR PROPS DEFALT VALUES
 
 
         background              = 'rgba(1,0,0,.9)'
@@ -70,7 +70,7 @@ The basic navbar without dropdown  can take the following props, only pages is r
         dropdown_color          = 'rgba(1,0,0,.9)'
 
 
-##USING DROPDOWNS
+## USING DROPDOWNS
 
 To use dropdowns all you have to do is to pass one or more page as an objects inside the pages array instead of a string using the following format.
 
@@ -78,7 +78,7 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
     { 'THE_NAME_OF_YOUR_PAGE': { dropdown:['dropdown1', 'dropdown2']}
 
 
-##DROPDOWN PROPS TYPES
+## DROPDOWN PROPS TYPES
         dropdown_color          = string
         dropdown_minWidth       = string
         shadows                 = bool
@@ -86,14 +86,14 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
         dropItem_margin_bottom  = string
 
 
-##DROPDOWN PROPS DEFALT VALUES
+## DROPDOWN PROPS DEFALT VALUES
         dropdown_color          = 'rgba(1,0,0,.9)'
         dropdown_minWidth       = '200px'
         shadows                 = false
         dropdown_marginTop      = '10px',
         dropItem_margin_bottom  = '10px'
 
-##Example passing all the optional props and also using dropdowns.
+## Example passing all the optional props and also using dropdowns.
 
 
     import React from 'react'
