@@ -121,7 +121,7 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
                   pages      ={options}     
                   background      = 'rgba(1,0,0,.9)'
                   pages           = {options}
-                  logo            = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
+                  logo            = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png'
                   logoheight      = '50px'
                   color           = 'white'
                   borderRadius    = '30px'
