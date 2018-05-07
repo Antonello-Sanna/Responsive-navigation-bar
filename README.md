@@ -93,7 +93,7 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
         dropdown_marginTop      = '10px',
         dropItem_margin_bottom  = '10px'
 
-## Example passing all the optional props and also using dropdowns.
+## Example passing some optional props and also using dropdowns.
 
 
     import React from 'react'

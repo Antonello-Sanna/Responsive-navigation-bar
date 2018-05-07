@@ -37,14 +37,6 @@ const DropDown =  props => (
             </ul>
         </Style>
 )
-
-DropDown.defaultProps = {
-    dropdown_color:'rgba(1,0,0,.9)',
-    dropdown_minWidth:'200px',
-    shadows:false,
-    dropdown_marginTop:'10px',
-    dropItem_margin_bottom:'10px'
-}
 DropDown.propTypes = {
     dropdown_color          : PropTypes.string,
     dropdown_minWidth       : PropTypes.string,
