@@ -68,6 +68,7 @@ export default class NavBarNPM extends React.Component{
 										dropdown_color     		=   {this.props.dropdown_color}
 										dropdownItems 	   		=   {dropdownArray}
 										dropdown_minWidth  		=   {this.props.dropdown_minWidth}
+										shadows 		   		=   {this.props.shadows}
 										dropdown_marginTop 		=   {this.props.dropdown_marginTop}
 										dropItem_margin_bottom  =   {this.props.dropItem_margin_bottom}
 									/>
@@ -167,6 +168,7 @@ NavBarNPM.defaultProps = {
 	imgLogoAlt:'github',
     dropdown_color:'rgba(1,0,0,.9)',
     dropdown_minWidth:'200px',
+    shadows:false,
     dropdown_marginTop:'10px',
     dropItem_margin_bottom:'10px'
 }
@@ -180,6 +182,7 @@ NavBarNPM.propTypes = {
 	imgLogoAlt      		: PropTypes.string,
 	dropdown_color 			: PropTypes.string,
 	dropdown_minWidth       : PropTypes.string,
+    shadows                 : PropTypes.bool,
     dropdownItems           : PropTypes.array,
     dropdown_marginTop      : PropTypes.string,
     dropItem_margin_bottom  : PropTypes.string,

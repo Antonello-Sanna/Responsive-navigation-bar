@@ -81,6 +81,7 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
 ## DROPDOWN PROPS TYPES
         dropdown_color          = string
         dropdown_minWidth       = string
+        shadows                 = bool
         dropdown_marginTop      = string
         dropItem_margin_bottom  = string
 
@@ -88,6 +89,7 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
 ## DROPDOWN PROPS DEFALT VALUES
         dropdown_color          = 'rgba(1,0,0,.9)'
         dropdown_minWidth       = '200px'
+        shadows                 = false
         dropdown_marginTop      = '10px'
         dropItem_margin_bottom  = '10px'
 
