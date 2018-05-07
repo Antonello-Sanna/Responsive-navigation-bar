@@ -16,7 +16,7 @@ const DropDown =  props => {
                 position: absolute;
                 background-color: ${props.dropdown_color};
                 min-width: ${props.dropdown_minWidth};
-                box-shadow: ${'0px 8px 6px 0px rgba(0,0,0,0.2)'};
+                box-shadow: ${shadows ? '0px 8px 6px 0px rgba(0,0,0,0.2)':null};
                 padding: 12px 16px;
                 z-index: 1;
             }
