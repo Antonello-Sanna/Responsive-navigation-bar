@@ -9,7 +9,6 @@ import DropDown from './DropDown'
 import './dropdown.css'
 import './index.css'
 
-
 const Desktop 	  = props => <Responsive {...props } minWidth = { 600} />;
 const Mobile  	  = props => <Responsive {...props } minWidth = { 0 } maxWidth={600}  />;
 
@@ -54,22 +53,17 @@ export default class NavBarNPM extends React.Component{
 				typeof ele === 'object' ?  content = Object.keys(ele)[0] : content = ele;
 
 				typeof ele === 'object' ?  linkTo = Object.keys(ele)[0] : linkTo = ele;
-
-				debugger
 			}
-				pageComp = 				<li 
+				pageComp = 				<div
 					className='dropdown'
 					style={main.element}
               				key = {i}>
-						  <NavLink 
+						{ dropdownArray ?
+						  <li 
 						  	style={{color:this.props.color}}
-						  	to={`/${linkTo}`} 
-              				exact className="inactive"
-              				activeClassName="active">
+						  	to={`/${linkTo}`}>
 							{content}
 
-							{ 
-								dropdownArray ? 
 									<DropDown 
 										dropdown_color     		=   {this.props.dropdown_color}
 										dropdownItems 	   		=   {dropdownArray}
@@ -78,10 +72,19 @@ export default class NavBarNPM extends React.Component{
 										dropdown_marginTop 		=   {this.props.dropdown_marginTop}
 										dropItem_margin_bottom  =   {this.props.dropItem_margin_bottom}
 									/>
-								: null
-							}
-              			</NavLink>
-              	</li>
+
+              			</li>
+						:
+						<NavLink 
+							style={{color:this.props.color}}
+							to={`/${linkTo}`} 
+							exact className="inactive"
+							activeClassName="active">
+					  {content}
+
+
+					</NavLink>}
+              	</div>
 			return pageComp
 		})
 	}
@@ -180,7 +183,7 @@ NavBarNPM.propTypes = {
 	dropdown_color 			: PropTypes.string,
 	dropdown_minWidth       : PropTypes.string,
     shadows                 : PropTypes.bool,
-    dropdownItems           : PropTypes.array.isRequired,
+    dropdownItems           : PropTypes.array,
     dropdown_marginTop      : PropTypes.string,
     dropItem_margin_bottom  : PropTypes.string,
 }

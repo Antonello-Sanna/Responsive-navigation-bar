@@ -3,9 +3,11 @@ import './dropdown.css'
 import Style from 'style-it'
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom'
-
+import './navbar.css'
 const DropDown =  props => {
-    debugger
+    var changePage = page => {
+        props.history.push({pathname:page})
+    }
         return <Style>
         {`
             .dropdown-content {
@@ -14,7 +16,7 @@ const DropDown =  props => {
                 position: absolute;
                 background-color: ${props.dropdown_color};
                 min-width: ${props.dropdown_minWidth};
-                box-shadow: ${'10px 18px 16px 10px rgba(0,0,0,0.2)'};
+                box-shadow: ${'0px 8px 6px 0px rgba(0,0,0,0.2)'};
                 padding: 12px 16px;
                 z-index: 1;
             }
@@ -24,16 +26,15 @@ const DropDown =  props => {
         `}
             <ul className="dropdown-content">
                 {    
-                    props.dropdownItems.map((ele, i)=>(
-                        <li className="item">
-                        <NavLink 
-                            to={ele} 
-                            exact className="inactive"
-                            activeClassName="active">
-                            {ele}
-                        </NavLink>
-                    </li>
-                    ))            
+                    props.dropdownItems.map((ele, i)=>{
+                        return  <li className ='item' key ={i} ><NavLink 
+                                        className ='item'
+                                        to = {`/${ele}`}
+                                        exact className="inactive"
+                                        activeClassName="active">
+                                    {ele}
+                                </NavLink></li>
+                })            
                 }
             </ul>
         </Style>
