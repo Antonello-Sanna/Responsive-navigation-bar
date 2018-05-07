@@ -10,7 +10,7 @@ it is fairly simple but is responsive and can have drop downs if required.
 The Component should ideally be loaded directly from the Router as shown in the example.
 
 ## INSTALLATION
-    npm i react-responsive-navigation --save
+    npm i reactjs-navigation --save
 
 ## Usage Example:
 
@@ -19,7 +19,7 @@ The Component should ideally be loaded directly from the Router as shown in the 
       BrowserRouter as Router,
     } from 'react-router-dom'
     
-    import NavBarNPM from 'react-responsive-navigation'
+    import NavBarNPM from 'reactjs-navigation'
     export default ()=> {
         const options = [
           '/',
@@ -101,7 +101,7 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
       BrowserRouter as Router,
     } from 'react-router-dom'
     
-    import NavBarNPM from 'react-responsive-navigation'
+    import NavBarNPM from 'reactjs-navigation'
     export default ()=> {
         const options = [
           '/',
