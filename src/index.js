@@ -40,7 +40,7 @@ export default class NavBarNPM extends React.Component{
 			var pageComp;
 			if(ele === '/'){
 				linkTo = ''
-				content = <img 
+				content = <img
               				style={{
               					maxHeight:this.props.logoheight,
               					borderRadius:this.props.borderRadius
@@ -71,12 +71,12 @@ export default class NavBarNPM extends React.Component{
 							{ 
 								dropdownArray ? 
 									<DropDown 
-										dropdown_color={this.props.dropdown_color}
-										dropdownItems ={dropdownArray}
-										dropdown_minWidth={this.props.dropdown_minWidth},
-										shadows={this.props.shadows},
-										dropdown_marginTop={this.props.dropdown_marginTop},
-										dropItem_margin_bottom={this.props.dropItem_margin_bottom}
+										dropdown_color     		=   {this.props.dropdown_color}
+										dropdownItems 	   		=   {dropdownArray}
+										dropdown_minWidth  		=   {this.props.dropdown_minWidth}
+										shadows 		   		=   {this.props.shadows}
+										dropdown_marginTop 		=   {this.props.dropdown_marginTop}
+										dropItem_margin_bottom  =   {this.props.dropItem_margin_bottom}
 									/>
 								: null
 							}

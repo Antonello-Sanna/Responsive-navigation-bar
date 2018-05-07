@@ -4,8 +4,9 @@ import Style from 'style-it'
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom'
 
-const DropDown =  props => (
-        <Style>
+const DropDown =  props => {
+    debugger
+        return <Style>
         {`
             .dropdown-content {
                 display: none;
@@ -13,7 +14,7 @@ const DropDown =  props => (
                 position: absolute;
                 background-color: ${props.dropdown_color};
                 min-width: ${props.dropdown_minWidth};
-                box-shadow: ${props.shadows ? '0px 8px 16px 0px rgba(0,0,0,0.2)' : null};
+                box-shadow: ${'10px 18px 16px 10px rgba(0,0,0,0.2)'};
                 padding: 12px 16px;
                 z-index: 1;
             }
@@ -36,7 +37,7 @@ const DropDown =  props => (
                 }
             </ul>
         </Style>
-)
+}
 DropDown.propTypes = {
     dropdown_color          : PropTypes.string,
     dropdown_minWidth       : PropTypes.string,
