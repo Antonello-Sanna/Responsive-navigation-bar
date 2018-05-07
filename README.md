@@ -1,5 +1,5 @@
 # reactjs-navigation
-A plug and play solution for your navigation bar needs…
+A plug and play navigation bar which handles everything through props.
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_86591FB794132C7BE9E767197E3584B3C5567A5820418BAE9F8C3775ABA9569E_1525625035893_Screen+Shot+2018-05-06+at+18.42.44.png)
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_86591FB794132C7BE9E767197E3584B3C5567A5820418BAE9F8C3775ABA9569E_1525625035903_Screen+Shot+2018-05-06+at+18.43.00.png)
