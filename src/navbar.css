@@ -7,11 +7,6 @@
     background: #ddd;
     transition: width .3s;
 }
-/* .active::after {
-    width: 100%;
-    transition: width .3s;
-    background: red;
-} */
 
 .inactive{
 	display:inline-block;

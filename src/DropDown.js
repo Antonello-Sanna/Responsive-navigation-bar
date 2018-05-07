@@ -16,6 +16,7 @@ const DropDown =  props => {
                 position: absolute;
                 background-color: ${props.dropdown_color};
                 min-width: ${props.dropdown_minWidth};
+                box-shadow: none;
                 padding: 12px 16px;
                 z-index: 1;
             }
