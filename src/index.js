@@ -73,6 +73,10 @@ export default class NavBarNPM extends React.Component{
 									<DropDown 
 										dropdown_color={this.props.dropdown_color}
 										dropdownItems ={dropdownArray}
+										dropdown_minWidth={this.props.dropdown_minWidth},
+										shadows={this.props.shadows},
+										dropdown_marginTop={this.props.dropdown_marginTop},
+										dropItem_margin_bottom={this.props.dropItem_margin_bottom}
 									/>
 								: null
 							}
@@ -159,15 +163,24 @@ NavBarNPM.defaultProps = {
 	color:'white',
 	borderRadius:'30px',
 	imgLogoAlt:'github',
-	dropdown_color:'rgba(1,0,0,.9)',
+    dropdown_color:'rgba(1,0,0,.9)',
+    dropdown_minWidth:'200px',
+    shadows:false,
+    dropdown_marginTop:'10px',
+    dropItem_margin_bottom:'10px'
 }
 NavBarNPM.propTypes = {
-	background      :PropTypes.string,
-	pages 	        :PropTypes.array.isRequired,
-	logo 	        :PropTypes.string,
-	logoheight      :PropTypes.string,
-	color 	        :PropTypes.string,
-	borderRadius    :PropTypes.string,
-	imgLogoAlt      :PropTypes.string,
-	dropdown_color :PropTypes.string
+	background      		: PropTypes.string,
+	pages 	        		: PropTypes.array.isRequired,
+	logo 	        		: PropTypes.string,
+	logoheight      		: PropTypes.string,
+	color 	        		: PropTypes.string,
+	borderRadius    		: PropTypes.string,
+	imgLogoAlt      		: PropTypes.string,
+	dropdown_color 			: PropTypes.string,
+	dropdown_minWidth       : PropTypes.string,
+    shadows                 : PropTypes.bool,
+    dropdownItems           : PropTypes.array.isRequired,
+    dropdown_marginTop      : PropTypes.string,
+    dropItem_margin_bottom  : PropTypes.string,
 }
