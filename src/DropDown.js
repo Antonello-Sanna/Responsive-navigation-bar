@@ -10,13 +10,12 @@ const DropDown =  props => {
     }
         return <Style>
         {`
-            .dropdown-content {
+            .drop_Content {
                 display: none;
                 margin-top:${props.dropdown_marginTop};
                 position: absolute;
                 background-color: ${props.dropdown_color};
                 min-width: ${props.dropdown_minWidth};
-                box-shadow: none;
                 padding: 12px 16px;
                 z-index: 1;
             }
@@ -42,7 +41,6 @@ const DropDown =  props => {
 DropDown.propTypes = {
     dropdown_color          : PropTypes.string,
     dropdown_minWidth       : PropTypes.string,
-    shadows                 : PropTypes.bool,
     dropdownItems           : PropTypes.array.isRequired,
     dropdown_marginTop      : PropTypes.string,
     dropItem_margin_bottom  : PropTypes.string,
