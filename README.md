@@ -66,14 +66,14 @@ The basic navbar without dropdown  can take the following props, only pages is r
 
     background              = 'rgba(1,0,0,.9)'
     pages                   = ['/','gallery','contact','about']
-    logo                    ='https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png'
-    logoheight              ='50px'
-    color                   ='white'
+    logo                    = 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png'
+    logoheight              = '50px'
+    color                   = 'white'
     borderRadius            = '30px'
     imgLogoAlt              = 'github'
     iconHeight 			        = '40px'
     iconBorderRadius        = '10px'
-    animation				        = true
+    animation				        =  true
     iconPosition		        = 'center' (center, 'flex-start', 'flex-end')
 
 
