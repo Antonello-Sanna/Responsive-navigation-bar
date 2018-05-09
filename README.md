@@ -1,6 +1,6 @@
 # reactjs-navigation
 A plug and play navigation bar which handles everything through props.
-
+![](https://media.giphy.com/media/fo29z9jWaUagn1sRmi/giphy.gif)
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_86591FB794132C7BE9E767197E3584B3C5567A5820418BAE9F8C3775ABA9569E_1525625035893_Screen+Shot+2018-05-06+at+18.42.44.png)
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_86591FB794132C7BE9E767197E3584B3C5567A5820418BAE9F8C3775ABA9569E_1525625035903_Screen+Shot+2018-05-06+at+18.43.00.png)
 
@@ -71,8 +71,7 @@ The basic navbar without dropdown  can take the following props, only pages is r
     color                   ='white'
     borderRadius            = '30px'
     imgLogoAlt              = 'github'
-    dropdown_color          = '#827c7c
-    iconHeight 			        = '30px'
+    iconHeight 			        = '40px'
     iconBorderRadius        = '10px'
     animation				        = true
     iconPosition		        = 'center' (center, 'flex-start', 'flex-end')
