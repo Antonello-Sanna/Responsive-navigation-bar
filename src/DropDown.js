@@ -9,14 +9,19 @@ const DropDown = props => {
         return <Style>
         {`
             .dropdown-content {
-                display: none;
+                transform:scaley(0);
+                transition: ${props.animation ? '0.3s ease-in-out transform' : null};
                 margin-top:${props.dropdown_marginTop};
                 position: absolute;
                 background-color: ${props.dropdown_color};
                 min-width: ${props.dropdown_minWidth};
                 box-shadow: ${props.shadows ? '0px 8px 6px 0px rgba(0,0,0,0.2)' : null};
-                padding: 12px 16px;
                 z-index: 1;
+                text-align:center;
+            }
+            .dropdown:hover .dropdown-content {
+                transform: scaley(1);
+                transition: ${props.animation ? '0.3s ease-in-out all' :null}
             }
             .item{
                 margin-bottom:${props.dropItem_margin_bottom};

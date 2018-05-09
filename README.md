@@ -47,14 +47,18 @@ The basic navbar without dropdown  can take the following props, only pages is r
 
 
     
-        background      = string
-        pages           = array(required);
-        logo            = string
-        logoheight      = string
-        color           = string
-        borderRadius    = string
-        imgLogoAlt      = string
-        dropdown_color  = string
+        background       = string
+        pages            = array(required)
+        logo             = string
+        logoheight       = string
+        color            = string
+        borderRadius     = string
+        imgLogoAlt       = string
+        dropdown_color   = string
+        iconHeight 			 = string
+	      iconBorderRadius = string
+	      animation				 = string
+	      iconPosition		 = string
 
 
 ## NAVBAR PROPS DEFALT VALUES
@@ -67,7 +71,12 @@ The basic navbar without dropdown  can take the following props, only pages is r
         color                   ='white'
         borderRadius            = '30px'
         imgLogoAlt              = 'github'
-        dropdown_color          = 'rgba(1,0,0,.9)'
+        dropdown_color          = '#827c7c
+        iconHeight 			        = '30px'
+	      iconBorderRadius        = '10px'
+	      animation				        = true
+	      iconPosition		        = 'center' (center, 'flex-start', 'flex-end')
+
 
 
 ## USING DROPDOWNS
@@ -90,7 +99,7 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
         dropdown_color          = 'rgba(1,0,0,.9)'
         dropdown_minWidth       = '200px'
         shadows                 = false
-        dropdown_marginTop      = '10px'
+        dropdown_marginTop      = '55px'
         dropItem_margin_bottom  = '10px'
 
 ## Example passing some optional props and also using dropdowns.
@@ -134,4 +143,43 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
             </Router>
         )
       }
+## Using Icons
+
+```import React from 'react'
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom'
+
+import NavBarNPM from 'reactjs-navigation'
+
+export default ()=> {
+    const options = [
+      '/',
+      {
+        'Products':
+      { dropdown:['page1', 'page2']}
+      },
+      {
+        'About us':
+        {dropdown:['dropdown1', 'dropdown2']}
+      },
+		{ icon:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqQ1YbQY6mYVrfFroJNRBYoBBbmDhmtV64WRb6EKwvG0-Dcwd7', 
+			page:'user',
+			hasDropwDown:true,
+			dropdowns:['Register','Login'] 
+		}
+    ]
+    return(
+        <Router>
+          <div>
+            <NavBarNPM 
+              pages      ={options}
+              iconPosition = 'center'
+            />
+            <div>
+              </div>
+          </div>
+        </Router>
+    )
+  }```
 

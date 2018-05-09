@@ -32,11 +32,33 @@ export default class NavBarNPM extends React.Component{
 		}
 	}
 
-	createNavBar(main){
+	
+	createNavBar(main, size){
+		var iconStyle
+		if(size != 'smallNav'){
+			iconStyle = {
+				display:'grid',
+				justifyContent: 'center'
+			}
+		}
 		var content;
 		var linkTo;
 		return this.props.pages.map((ele, i)=>{
 			var pageComp;
+			if(ele.icon){
+				content = <div><img
+				style={{
+					maxHeight:this.props.iconHeight,
+					borderRadius:this.props.iconBorderRadius
+				}}
+				  alt = {this.props.iconAlt}
+				  src = {ele.icon}
+				/></div>
+				if(ele.hasDropwDown){
+					dropdownArray = ele.dropdowns
+				}
+				linkTo = ele.page
+			}
 			if(ele === '/'){
 				linkTo = ''
 				content = <img
@@ -48,19 +70,26 @@ export default class NavBarNPM extends React.Component{
               				  src = {this.props.logo}
               				/>
 			}else{
-				var dropdownArray;
-				typeof ele === 'object' ? dropdownArray = ele[Object.keys(ele)[0]].dropdown : null
-				typeof ele === 'object' ?  content = Object.keys(ele)[0] : content = ele;
-
-				typeof ele === 'object' ?  linkTo = Object.keys(ele)[0] : linkTo = ele;
+				if(!ele.icon){
+					var dropdownArray;
+					typeof ele === 'object' ? dropdownArray = ele[Object.keys(ele)[0]].dropdown : null
+					typeof ele === 'object' ? content = Object.keys(ele)[0] : content = ele;
+					typeof ele === 'object' ? linkTo  = Object.keys(ele)[0] : linkTo = ele;
+				}
 			}
 				pageComp = 				<div
 					className='dropdown'
-					style={main.element}
+					style={[main.element, iconStyle]}
               				key = {i}>
 						{ dropdownArray ?
 						  <li 
-						  	style={{color:this.props.color}}
+						  	style={{
+								  color:this.props.color, 
+								  display:'flex',
+								  alignItems:'center',
+								  justifyContent: this.props.iconPosition,
+								  height:'50px'
+								}}
 						  	to={`/${linkTo}`}>
 							{content}
 
@@ -71,6 +100,7 @@ export default class NavBarNPM extends React.Component{
 										shadows 		   		=   {this.props.shadows}
 										dropdown_marginTop 		=   {this.props.dropdown_marginTop}
 										dropItem_margin_bottom  =   {this.props.dropItem_margin_bottom}
+										animation 				=   {this.props.animation}
 									/>
 
               			</li>
@@ -166,11 +196,15 @@ NavBarNPM.defaultProps = {
 	color:'white',
 	borderRadius:'30px',
 	imgLogoAlt:'github',
-    dropdown_color:'rgba(1,0,0,.9)',
+    dropdown_color:'#827c7c',
     dropdown_minWidth:'200px',
     shadows:false,
-    dropdown_marginTop:'10px',
-    dropItem_margin_bottom:'10px'
+    dropdown_marginTop : '55px',
+	dropItem_margin_bottom:'10px',
+	iconHeight:'30px',
+	iconBorderRadius:'10px',
+	animation:true,
+	iconPosition:'center'
 }
 NavBarNPM.propTypes = {
 	background      		: PropTypes.string,
@@ -185,5 +219,9 @@ NavBarNPM.propTypes = {
     shadows                 : PropTypes.bool,
     dropdownItems           : PropTypes.array,
     dropdown_marginTop      : PropTypes.string,
-    dropItem_margin_bottom  : PropTypes.string,
+	dropItem_margin_bottom  : PropTypes.string,
+	iconHeight 				: PropTypes.string,
+	iconBorderRadius		: PropTypes.string,
+	animation				: PropTypes.string,
+	iconPosition			: PropTypes.string
 }
