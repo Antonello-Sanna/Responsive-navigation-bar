@@ -47,35 +47,35 @@ The basic navbar without dropdown  can take the following props, only pages is r
 
 
     
-        background       = string
-        pages            = array(required)
-        logo             = string
-        logoheight       = string
-        color            = string
-        borderRadius     = string
-        imgLogoAlt       = string
-        dropdown_color   = string
-        iconHeight 			 = string
-	      iconBorderRadius = string
-	      animation				 = string
-	      iconPosition		 = string
+    background       = string
+    pages            = array(required)
+    logo             = string
+    logoheight       = string
+    color            = string
+    borderRadius     = string
+    imgLogoAlt       = string
+    dropdown_color   = string
+    iconHeight 			 = string
+    iconBorderRadius = string
+    animation				 = string
+    iconPosition		 = string
 
 
 ## NAVBAR PROPS DEFALT VALUES
 
 
-        background              = 'rgba(1,0,0,.9)'
-        pages                   = ['/','gallery','contact','about']
-        logo                    ='https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png'
-        logoheight              ='50px'
-        color                   ='white'
-        borderRadius            = '30px'
-        imgLogoAlt              = 'github'
-        dropdown_color          = '#827c7c
-        iconHeight 			        = '30px'
-	      iconBorderRadius        = '10px'
-	      animation				        = true
-	      iconPosition		        = 'center' (center, 'flex-start', 'flex-end')
+    background              = 'rgba(1,0,0,.9)'
+    pages                   = ['/','gallery','contact','about']
+    logo                    ='https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png'
+    logoheight              ='50px'
+    color                   ='white'
+    borderRadius            = '30px'
+    imgLogoAlt              = 'github'
+    dropdown_color          = '#827c7c
+    iconHeight 			        = '30px'
+    iconBorderRadius        = '10px'
+    animation				        = true
+    iconPosition		        = 'center' (center, 'flex-start', 'flex-end')
 
 
 
@@ -88,19 +88,19 @@ To use dropdowns all you have to do is to pass one or more page as an objects in
 
 
 ## DROPDOWN PROPS TYPES
-        dropdown_color          = string
-        dropdown_minWidth       = string
-        shadows                 = bool
-        dropdown_marginTop      = string
-        dropItem_margin_bottom  = string
+    dropdown_color          = string
+    dropdown_minWidth       = string
+    shadows                 = bool
+    dropdown_marginTop      = string
+    dropItem_margin_bottom  = string
 
 
 ## DROPDOWN PROPS DEFALT VALUES
-        dropdown_color          = 'rgba(1,0,0,.9)'
-        dropdown_minWidth       = '200px'
-        shadows                 = false
-        dropdown_marginTop      = '55px'
-        dropItem_margin_bottom  = '10px'
+    dropdown_color          = 'rgba(1,0,0,.9)'
+    dropdown_minWidth       = '200px'
+    shadows                 = false
+    dropdown_marginTop      = '55px'
+    dropItem_margin_bottom  = '10px'
 
 ## Example passing some optional props and also using dropdowns.
 
