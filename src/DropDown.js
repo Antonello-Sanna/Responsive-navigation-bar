@@ -4,10 +4,8 @@ import Style from 'style-it'
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom'
 import './navbar.css'
-const DropDown =  props => {
-    var changePage = page => {
-        props.history.push({pathname:page})
-    }
+
+const DropDown = props => {
         return <Style>
         {`
             .dropdown-content {
@@ -27,13 +25,16 @@ const DropDown =  props => {
             <ul className="dropdown-content">
                 {    
                     props.dropdownItems.map((ele, i)=>{
-                        return  <li className ='item' key ={i} ><NavLink 
+                        return  <li    
+                                    className ='item' key ={i} >
+                                    <NavLink 
                                         className ='item'
                                         to = {`/${ele}`}
                                         exact className="inactive"
                                         activeClassName="active">
                                     {ele}
-                                </NavLink></li>
+                                    </NavLink>
+                                </li>
                 })            
                 }
             </ul>
