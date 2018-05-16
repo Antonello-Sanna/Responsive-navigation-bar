@@ -26,3 +26,7 @@
     padding:10px;
     display: inline-block;
 }
+
+.nav_bar{
+    z-index: 100;
+}

@@ -133,14 +133,17 @@ export default class NavBarNPM extends React.Component{
 				position:'fixed',
 				top:0,
 				width:'100%',
-				zIndex: 100
+				zIndex:100
 			},
 			mobile:{
 				display:'grid',
 				height:this.state.height,
 				alignItems:'center',
 				gridTemplateColumns:'1fr',
-				transition:'.5s ease all'
+				transition:'.5s ease all',
+				position:'fixed',
+				top:0,
+				zIndex:100
 			},
 			element:{
 				padding:'10px',
@@ -167,7 +170,9 @@ export default class NavBarNPM extends React.Component{
 				`}
 			<div style={main.minNav}>
 			<Desktop>
-			<ul style={main.desktop}>
+			<ul style={main.desktop}
+				className="nav_bar" 
+				>
 				{this.createNavBar(main)}
 			</ul>
 			</Desktop>
@@ -179,7 +184,7 @@ export default class NavBarNPM extends React.Component{
 			/>
 			<div style={main.burger}>
 				<ul 
-				style={main.mobile}>
+				style={main.mobile} className="nav_bar">
 				{this.createNavBar(main, 'smallNav')}
 			</ul></div>
 			</Mobile>
