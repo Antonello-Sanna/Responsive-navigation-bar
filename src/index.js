@@ -15,10 +15,12 @@ const Mobile  	  = props => <Responsive {...props } minWidth = { 0 } maxWidth={6
 export default class NavBarNPM extends React.Component{
 	constructor(){
 		super()
-		this.state = {display:'none', scale:'scaley(0)', transform:''}
+		this.state = {display:'none', scale:'scaley(0)', transform:'', rotateAngle:['45deg', '90deg', '0deg'] }
 		this.createNavBar =this.createNavBar.bind(this)
+
 	}
 	toogler  = () => {
+
 		var that = this
 		var scaleIt = ( key, val, time, key2, val2 ) => {
 			setTimeout(()=>{
@@ -26,7 +28,7 @@ export default class NavBarNPM extends React.Component{
 			},time)
 		}
 		if (this.state.display === 'none')  {
-			that.setState({display:'block', transform:'rotate(80deg)'},scaleIt('scale', 'scaley(1)',50))
+			that.setState({display:'block', transform:`rotate(${this.state.rotateAngle[this.props.angle]})`},scaleIt('scale', 'scaley(1)',50))
 		} else {
 			that.setState({transform:'', scale:'scaley(0)'}, scaleIt('display','none',500))
 		}
@@ -213,7 +215,8 @@ NavBarNPM.defaultProps = {
 	iconHeight:'40px',
 	iconBorderRadius:'10px',
 	animation:true,
-	iconPosition:'center'
+	iconPosition:'center',
+	angle:0
 }
 NavBarNPM.propTypes = {
 	background      		: PropTypes.string,
@@ -232,5 +235,6 @@ NavBarNPM.propTypes = {
 	iconHeight 				: PropTypes.string,
 	iconBorderRadius		: PropTypes.string,
 	animation				: PropTypes.string,
-	iconPosition			: PropTypes.string
+	iconPosition			: PropTypes.string,
+	angle 					: PropTypes.number
 }

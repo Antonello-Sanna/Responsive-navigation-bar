@@ -60,6 +60,9 @@ The basic navbar without dropdown  can take the following props, only pages is r
         iconBorderRadius       = string
         animation              = string
         iconPosition           = string
+        angle                  = number 
+        the angle props has to be a number between 0 and 2 and it determines the burger menu angle when the menu is open (mobile view))
+        0 45deg,  1 90deg, 2 0deg
 
     
 
@@ -77,6 +80,7 @@ The basic navbar without dropdown  can take the following props, only pages is r
         iconBorderRadius        = '10px'
         animation               =  true
         iconPosition            = 'center' (center, 'flex-start', 'flex-end')
+        angle                   = 0
 ##  USING DROPDOWNS
 
 To use dropdowns all you have to do is to pass one or more page as an objects inside the pages array instead of a string using the following format.
