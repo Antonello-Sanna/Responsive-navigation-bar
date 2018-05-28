@@ -15,7 +15,7 @@ const Mobile  	  = props => <Responsive {...props } minWidth = { 0 } maxWidth={6
 export default class NavBarNPM extends React.Component{
 	constructor(){
 		super()
-		this.state = {display:'none', scale:'scale(0)', transform:'', height:'0px'}
+		this.state = {display:'none', scale:'scaley(0)', transform:''}
 		this.createNavBar =this.createNavBar.bind(this)
 	}
 	toogler  = () => {
@@ -26,9 +26,9 @@ export default class NavBarNPM extends React.Component{
 			},time)
 		}
 		if (this.state.display === 'none')  {
-			that.setState({display:'block', transform:'rotate(80deg)'},scaleIt('scale', 'scaley(1)',50, 'height', '35vh'))
+			that.setState({display:'block', transform:'rotate(80deg)'},scaleIt('scale', 'scaley(1)',50))
 		} else {
-			that.setState({height:'0px', transform:'', scale:'scale(0)'}, scaleIt('display','none',500))
+			that.setState({transform:'', scale:'scaley(0)'}, scaleIt('display','none',500))
 		}
 	}
 
@@ -138,13 +138,16 @@ export default class NavBarNPM extends React.Component{
 			},
 			mobile:{
 				display:'grid',
-				height:this.state.height,
 				alignItems:'center',
 				gridTemplateColumns:'1fr',
+				gridGap:'20px',
 				transition:'.5s ease all',
 				position:'fixed',
 				top:0,
-				zIndex:100
+				zIndex:100,
+				width:'100%',
+				backgroundColor:this.props.background,
+
 			},
 			element:{
 				padding:'10px',
