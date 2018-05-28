@@ -1,6 +1,6 @@
 {
   "name": "reactjs-navigation",
-  "version": "0.3.3",
+  "version": "0.3.5",
   "description": "A plug and play responsive navigation bar for React, with dropdowns if required",
   "main": "build/index.js",
   "scripts": {

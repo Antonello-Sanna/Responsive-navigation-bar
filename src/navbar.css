@@ -6,6 +6,7 @@
     margin-top:2px;
     background: #ddd;
     transition: width .3s;
+    
 }
 
 .inactive{
@@ -25,6 +26,7 @@
     padding:10px;
     display: inline-block;
 }
+<<<<<<< HEAD
 .desktop{
     position: fixed;
     width: 100%;
@@ -37,4 +39,9 @@
     width: 100%;
     top: 0;
     z-index: 1000000;
+=======
+
+.nav_bar{
+    z-index: 100;
+>>>>>>> a4f0aa6acbc0c9ab0e918595b88dec08f227da12
 }
