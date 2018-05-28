@@ -78,6 +78,7 @@ export default class NavBarNPM extends React.Component{
 				}
 			}
 				pageComp = 				<div
+					onClick ={this.toogler}
 					className='dropdown'
 					style={[main.element, iconStyle]}
               				key = {i}>
@@ -164,8 +165,8 @@ export default class NavBarNPM extends React.Component{
 						background: ${this.props.color};
 					}
 				`}
-			<div style={main.minNav}>
-			<Desktop>
+			<div style={main.minNav} className="mobile">
+			<Desktop className="desktop">
 			<ul style={main.desktop}>
 				{this.createNavBar(main)}
 			</ul>
